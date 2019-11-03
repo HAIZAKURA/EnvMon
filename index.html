@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <script>window.$ = window.jQuery = require('./public/js/jquery.min.js');</script>
+    <script src="./public/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="./public/js/popper.min.js"></script>
+    <script src="./public/js/bootstrap.min.js"></script>
+    <script src="./public/js/include.js"></script>
+    <title>Hello World!</title>
+    <style type="text/css">
+      th {text-align: center;}
+    </style>
+  </head>
+  <body oncontextmenu="return false;" onselectstart="return false">
+    <!--container-->
+    <div class="container">
+      <!--header-->
+      <div class="row" style="-webkit-app-region: drag">
+        <div class="page-header">
+          <h1 class="text-center">环&nbsp;境&nbsp;监&nbsp;控&nbsp;系&nbsp;统</h1>
+        </div>
+      </div>
+      <!--panes-->
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <!--nav tabs-->
+          <ul class="nav nav-pills">
+            <li role="presentation" class="active">
+              <a href="#env_mon" aria-controls="env_mon" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>&nbsp;环境监控</a>
+            </li>
+            <li role="presentation">
+              <a href="#pow_mon" aria-activedescendant="pow_mon" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span>&nbsp;配电监控</a>
+            </li>
+            <li role="presentation">
+              <a href="#cfg_set" aria-activedescendant="cfg_set" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;参数设置</a>
+            </li>
+            <li role="presentation">
+              <a href="#acc_con" aria-activedescendant="acc_con" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;门禁管理</a>
+            </li>
+            <li role="presentation">
+              <a href="#air_con" aria-activedescendant="air_con" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-scale" aria-hidden="true"></span>&nbsp;空调管理</a>
+            </li>
+            <li role="presentation">
+              <a href="#dat_que" aria-activedescendant="dat_que" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;数据查询</a>
+            </li>
+            <li role="presentation">
+              <a href="#aut_con" aria-activedescendant="aut_con" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;权限管理</a>
+            </li>
+          </ul>
+          <!--tab panes-->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="env_mon">
+              <include src="./public/tab_1.html"></include>
+              <!---
+              <div class="row">
+                <br>
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading">环境温湿度</div>
+                      <table class="table">
+                        <tr>
+                          <th>温度一</th>
+                          <th>温度二</th>
+                          <th>温度三</th>
+                          <th>湿度一</th>
+                          <th>湿度二</th>
+                          <th>湿度三</th>
+                        </tr>
+                        <tr>
+                          <th>23.2 &#8451;</th>
+                          <th>24.1 &#8451;</th>
+                          <th>22.7 &#8451;</th>
+                          <th>65.2 &#37;</th>
+                          <th>68.3 &#37;</th>
+                          <th>85.2 &#37;</th>
+                        </tr>
+                        <tr>
+                          <th>
+                            <span class="label label-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span>
+                          </th>
+                          <th>
+                            <span class="label label-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span>
+                          </th>
+                          <th>
+                            <span class="label label-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span>
+                          </th>
+                          <th>
+                            <span class="label label-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span>
+                          </th>
+                          <th>
+                            <span class="label label-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span>
+                          </th>
+                          <th>
+                            <span class="label label-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></span>
+                          </th>
+                        </tr>
+                      </table>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="panel panel-primary">
+                    <div class="panel-heading">电缆沟水位</div>
+                      <table class="table">
+                        <tr>
+                          <th>一号点</th>
+                          <th>二号点</th>
+                          <th>三号点</th>
+                          <th>四号点</th>
+                          <th>五号点</th>
+                        </tr>
+                        <tr>
+                          <th>56 mm</th>
+                          <th>38 mm</th>
+                          <th>102 mm</th>
+                          <th>23 mm</th>
+                          <th>214 mm</th>
+                        </tr>
+                        <tr>
+                          <th>
+                            <span class="label label-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span>
+                          </th>
+                          <th>
+                            <span class="label label-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span>
+                          </th>
+                          <th>
+                            <span class="label label-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></span>
+                          </th>
+                          <th>
+                            <span class="label label-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span>
+                          </th>
+                          <th>
+                            <span class="label label-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></span>
+                          </th>
+                        </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            -->
+            </div>
+            <div role="tabpanel" class="tab-pane" id="pow_mon">
+              <include src="./public/tab_2.html"></include>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="cfg_set">3</div>
+            <div role="tabpanel" class="tab-pane" id="acc_con">4</div>
+            <div role="tabpanel" class="tab-pane" id="air_con">5</div>
+            <div role="tabpanel" class="tab-pane" id="dat_que">6</div>
+            <div role="tabpanel" class="tab-pane" id="aut_con">7</div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+    <script src="./renderer.js"></script>
+    <script>
+      //panes switch
+      $('#myTabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      });
+    </script>
+  </body>
+</html>

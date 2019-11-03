@@ -1,0 +1,21 @@
+{
+  "name": "envmon",
+  "version": "1.0.0",
+  "description": "An environmental monitoring system.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": {
+    "name": "Jiang",
+    "email": "i@amtry.cc"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^7.0.0"
+  },
+  "dependencies": {
+    "serialport": "^8.0.5"
+  }
+}

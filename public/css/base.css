@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: PingFangSC-Light, 微软雅黑;
+}
+body,html{
+    width: 100%;
+    height: auto;
+    color:#333;
+    background: url('../img/bg.png') no-repeat;
+}
+
+/*header*/
+.header{
+    width: 100%;
+    height: 80px;
+}
+.bg_header{
+    width: 100%;
+    height: 80px;
+    background: url(../img/title.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.header>.header_nav{
+    margin-left: 20px;
+}
+
+.t_title{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 80px;
+    color: #fff;
+}
+
