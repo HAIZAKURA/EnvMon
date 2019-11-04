@@ -89,27 +89,27 @@
               <button type="button" class="btn btn-default" id="btn_1_01">O&nbsp;&nbsp;N</button>
             </th>
             <th>
-              <button type="button" class="btn btn-default" id="btn_1_02">O&nbsp;&nbsp;N</button>
+              <button type="button" class="btn btn-default" id="btn_1_02" onclick="sw_02()">O&nbsp;&nbsp;N</button>
             </th>
             <th>
-              <button type="button" class="btn btn-default" id="btn_1_03">O&nbsp;&nbsp;N</button>
+              <button type="button" class="btn btn-default" id="btn_1_03" onclick="sw_03()">O&nbsp;&nbsp;N</button>
             </th>
             <th>
-              <button type="button" class="btn btn-default" id="btn_1_04">O&nbsp;&nbsp;N</button>
+              <button type="button" class="btn btn-default" id="btn_1_04" onclick="sw_04()">O&nbsp;&nbsp;N</button>
             </th>
           </tr>
           <tr>
             <th>
-              <button type="button" class="btn btn-primary" id="btn_1_05">OFF</button>
+              <button type="button" class="btn btn-primary" id="btn_1_05" onclick="sw_05()">OFF</button>
             </th>
             <th>
-              <button type="button" class="btn btn-primary" id="btn_1_06">OFF</button>
+              <button type="button" class="btn btn-primary" id="btn_1_06" onclick="sw_06()">OFF</button>
             </th>
             <th>
-              <button type="button" class="btn btn-primary" id="btn_1_07">OFF</button>
+              <button type="button" class="btn btn-primary" id="btn_1_07" onclick="sw_07()">OFF</button>
             </th>
             <th>
-              <button type="button" class="btn btn-primary" id="btn_1_08">OFF</button>
+              <button type="button" class="btn btn-primary" id="btn_1_08" onclick="sw_08()">OFF</button>
             </th>
           </tr>
         </table>
@@ -193,17 +193,142 @@
         </tr>
         <tr>
           <th>
-            <button type="button" class="btn btn-primary" id="btn_man">M&nbsp;A&nbsp;N</button>
+            <input type="button" class="btn btn-primary" id="btn_man" value="M A N" />
           </th>
           <th>
             <button type="button" class="btn btn-primary" id="btn_switch">SWITCH</button>
           </th>
           <th>
-            <h5><span class="label label-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></span></h5>
+            <h5><span class="label label-danger" id="switch_states_label"><span class="glyphicon glyphicon-remove" id="switch_states" aria-hidden="true"></span></span></h5>
           </th>
         </tr>
       </table>
     </div>
-    <button type="button" class="btn btn-block btn-danger btn-sm" id="btn_sign">签&nbsp;&nbsp;到</button>
+    <!--button trigger modal-->
+    <button type="button" class="btn btn-block btn-danger btn-sm" id="btn_sign" data-toggle="modal" data-target="#signModal">签&nbsp;&nbsp;到</button>
   </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="signModal" tabindex="-1" role="dialog" aria-labelledby="signModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h1 style="text-align: center;">签到成功</h1>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  //btn_1_01
+  $("#btn_1_01").click(function () {
+    if ($(this).hasClass("btn-primary") && $("#btn_1_05").hasClass("btn-default")) {
+      $("#btn_1_05").removeClass("btn-default").addClass("btn-primary");
+      $(this).removeClass("btn-primary").addClass("btn-default");
+    } else {
+      $(this).removeClass("btn-default").addClass("btn-primary");
+      $("#btn_1_05").removeClass("btn-primary").addClass("btn-default");
+    }
+  });
+
+  //btn_1_05
+  $("#btn_1_05").click(function () {
+    if ($(this).hasClass("btn-primary") && $("#btn_1_01").hasClass("btn-default")) {
+      $("#btn_1_01").removeClass("btn-default").addClass("btn-primary");
+      $(this).removeClass("btn-primary").addClass("btn-default");
+    } else {
+      $(this).removeClass("btn-default").addClass("btn-primary");
+      $("#btn_1_01").removeClass("btn-primary").addClass("btn-default");
+    }
+  });
+
+  //btn_1_02
+  $("#btn_1_02").click(function () {
+    if ($(this).hasClass("btn-primary") && $("#btn_1_06").hasClass("btn-default")) {
+      $("#btn_1_06").removeClass("btn-default").addClass("btn-primary");
+      $(this).removeClass("btn-primary").addClass("btn-default");
+    } else {
+      $(this).removeClass("btn-default").addClass("btn-primary");
+      $("#btn_1_06").removeClass("btn-primary").addClass("btn-default");
+    }
+  });
+
+  //btn_1_06
+  $("#btn_1_06").click(function () {
+    if ($(this).hasClass("btn-primary") && $("#btn_1_02").hasClass("btn-default")) {
+      $("#btn_1_02").removeClass("btn-default").addClass("btn-primary");
+      $(this).removeClass("btn-primary").addClass("btn-default");
+    } else {
+      $(this).removeClass("btn-default").addClass("btn-primary");
+      $("#btn_1_02").removeClass("btn-primary").addClass("btn-default");
+    }
+  });
+
+  //btn_1_03
+  $("#btn_1_03").click(function () {
+    if ($(this).hasClass("btn-primary") && $("#btn_1_07").hasClass("btn-default")) {
+      $("#btn_1_07").removeClass("btn-default").addClass("btn-primary");
+      $(this).removeClass("btn-primary").addClass("btn-default");
+    } else {
+      $(this).removeClass("btn-default").addClass("btn-primary");
+      $("#btn_1_07").removeClass("btn-primary").addClass("btn-default");
+    }
+  });
+
+  //btn_1_07
+  $("#btn_1_07").click(function () {
+    if ($(this).hasClass("btn-primary") && $("#btn_1_03").hasClass("btn-default")) {
+      $("#btn_1_03").removeClass("btn-default").addClass("btn-primary");
+      $(this).removeClass("btn-primary").addClass("btn-default");
+    } else {
+      $(this).removeClass("btn-default").addClass("btn-primary");
+      $("#btn_1_03").removeClass("btn-primary").addClass("btn-default");
+    }
+  });
+
+  //btn_1_04
+  $("#btn_1_04").click(function () {
+    if ($(this).hasClass("btn-primary") && $("#btn_1_08").hasClass("btn-default")) {
+      $("#btn_1_08").removeClass("btn-default").addClass("btn-primary");
+      $(this).removeClass("btn-primary").addClass("btn-default");
+    } else {
+      $(this).removeClass("btn-default").addClass("btn-primary");
+      $("#btn_1_08").removeClass("btn-primary").addClass("btn-default");
+    }
+  });
+
+  //btn_1_08
+  $("#btn_1_08").click(function () {
+    if ($(this).hasClass("btn-primary") && $("#btn_1_04").hasClass("btn-default")) {
+      $("#btn_1_04").removeClass("btn-default").addClass("btn-primary");
+      $(this).removeClass("btn-primary").addClass("btn-default");
+    } else {
+      $(this).removeClass("btn-default").addClass("btn-primary");
+      $("#btn_1_04").removeClass("btn-primary").addClass("btn-default");
+    }
+  });
+
+  //btn_man
+  $("#btn_man").click(function () {
+    if ($(this).val() == "M A N") {
+      $(this).val("AUTO");
+    } else {
+      $(this).val("M A N");
+    }
+  });
+
+  //btn_switch
+  $("#btn_switch").click(function () {
+    if ($("#switch_states").hasClass("glyphicon-remove")) {
+      $("#switch_states_label").removeClass("label-danger").addClass("label-success");
+      $("#switch_states").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+    } else {
+      $("#switch_states_label").removeClass("label-success").addClass("label-danger");
+      $("#switch_states").removeClass("glyphicon-ok").addClass("glyphicon-remove");
+    }
+  });
+</script>
