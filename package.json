@@ -16,6 +16,7 @@
     "electron": "^7.0.0"
   },
   "dependencies": {
+    "electron-connect": "^0.6.3",
     "serialport": "^8.0.5"
   }
 }
