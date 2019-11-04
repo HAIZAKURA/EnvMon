@@ -25,10 +25,9 @@
       </div>
       <!--panes-->
       <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-10">
+        <!--div class="col-md-12"-->
           <!--nav tabs-->
-          <ul class="nav nav-pills">
+          <ul class="nav nav-pills nav-justified">
             <li role="presentation" class="active">
               <a href="#env_mon" aria-controls="env_mon" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>&nbsp;环境监控</a>
             </li>
@@ -145,14 +144,17 @@
             <div role="tabpanel" class="tab-pane" id="pow_mon">
               <include src="./public/tab_2.html"></include>
             </div>
-            <div role="tabpanel" class="tab-pane" id="cfg_set">3</div>
-            <div role="tabpanel" class="tab-pane" id="acc_con">4</div>
+            <div role="tabpanel" class="tab-pane" id="cfg_set">
+              <include src="./public/tab_3.html"></include>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="acc_con">
+              <include src="./public/tab_4.html"></include>
+            </div>
             <div role="tabpanel" class="tab-pane" id="air_con">5</div>
             <div role="tabpanel" class="tab-pane" id="dat_que">6</div>
             <div role="tabpanel" class="tab-pane" id="aut_con">7</div>
           </div>
-        </div>
-        <div class="col-md-1"></div>
+        <!--/div-->
       </div>
     </div>
     <script src="./renderer.js"></script>

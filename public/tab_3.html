@@ -1,0 +1,349 @@
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">设备自动启停设置</div>
+            <table class="table">
+                <tr>
+                    <th colspan="2">风机启动（温度）</th>
+                    <th colspan="2">风机启动（湿度）</th>
+                    <th colspan="2">除湿机启动</th>
+                    <th colspan="2">水泵启动</th>
+                </tr>
+                <tr>
+                    <th>温度值</th>
+                    <th>回差值</th>
+                    <th>湿度值</th>
+                    <th>回差值</th>
+                    <th>湿度值</th>
+                    <th>回差值</th>
+                    <th>水位值</th>
+                    <th>回差值</th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="fun_tmp_value" step="0.1" value="35.0" />
+                            <span class="input-group-addon" id="basic-addon2">&#8451;</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="fun_tmp_offset" step="0.1" value="2.0" />
+                            <span class="input-group-addon" id="basic-addon2">&#8451;</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="fun_hum_value" step="0.1" value="35.0" />
+                            <span class="input-group-addon" id="basic-addon2">&#37;</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="fun_hum_offset" step="0.1" value="2.0" />
+                            <span class="input-group-addon" id="basic-addon2">&#37;</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="dehun_hum_value" step="0.1" value="35.0" />
+                            <span class="input-group-addon" id="basic-addon2">&#37;</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="dehun_hum_offset" step="0.1" value="2.0" />
+                            <span class="input-group-addon" id="basic-addon2">&#37;</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="pump_lv_value" step="0.1" value="35.0" />
+                            <span class="input-group-addon" id="basic-addon2">mm</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="pump_lv_offset" step="0.1" value="2.0" />
+                            <span class="input-group-addon" id="basic-addon2">mm</span>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">设备自动启停设置</div>
+            <table class="table">
+                <tr>
+                    <th colspan="2">定时布防时间</th>
+                    <th colspan="2">风机定时开启一</th>
+                    <th colspan="2">风机定时开启二</th>
+                    <th>通风时间</th>
+                    <th>SF<sub>6</sub>强排时间</th>
+                    <th>开门触发时间</th>
+                    <th>数据记录间隔</th>
+                </tr>
+                <tr>
+                    <th>开始</th>
+                    <th>结束</th>
+                    <th>开始</th>
+                    <th>结束</th>
+                    <th>开始</th>
+                    <th>结束</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="input-group">
+                            <input type="time" class="form-control" placeholder="" aria-describedby="basic-addon2" id="def_time_start" value="18:00" />
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="time" class="form-control" placeholder="" aria-describedby="basic-addon2" id="def_time_end" value="08:00" />
+                            </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="time" class="form-control" placeholder="" aria-describedby="basic-addon2" id="fun_time_start_1" value="08:00" />
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="time" class="form-control" placeholder="" aria-describedby="basic-addon2" id="fun_time_end_1" value="08:15" />
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="time" class="form-control" placeholder="" aria-describedby="basic-addon2" id="fun_time_start_2"  value="16:00" />
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="time" class="form-control" placeholder="" aria-describedby="basic-addon2" id="fun_time_end_2" value="16:15" />
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="ven_time" step="1" value="5" />
+                            <span class="input-group-addon" id="basic-addon2">min</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="sf6_ven_time" step="1" value="10" />
+                            <span class="input-group-addon" id="basic-addon2">min</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="door_open_time" step="1" value="3" />
+                            <span class="input-group-addon" id="basic-addon2">s</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="data_rec_inv" step="1" value="10" />
+                            <span class="input-group-addon" id="basic-addon2">s</span>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">环境测量限制</div>
+            <table class="table">
+                <tr>
+                    <th>环境温度</th>
+                    <th>环境湿度</th>
+                    <th>紧急水位</th>
+                    <th>警戒水位</th>
+                    <th>预警水位</th>
+                    <th>浸水水位</th>
+                    <th>SF<sub>6</sub>浓度</th>
+                    <th>O<sub>3</sub>浓度</th>
+                    <th>O<sub>3</sub>浓度</th>
+                </tr>
+                <tr>
+                    <th>上限</th>
+                    <th>上限</th>
+                    <th>上限</th>
+                    <th>上限</th>
+                    <th>上限</th>
+                    <th>上限</th>
+                    <th>上限</th>
+                    <th>上限</th>
+                    <th>下限</th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="tmp_limt_up" step="0.1" value="35.0" />
+                            <span class="input-group-addon" id="basic-addon2">&#8451;</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="hum_limt_up" step="0.1" value="95.0" />
+                            <span class="input-group-addon" id="basic-addon2">&#37;</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="emg_lv_limt_up" step="1" value="400" />
+                            <span class="input-group-addon" id="basic-addon2">mm</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="war_lv_limt_up" step="1" value="320" />
+                            <span class="input-group-addon" id="basic-addon2">mm</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="alt_lv_limt_up" step="1" value="230" />
+                            <span class="input-group-addon" id="basic-addon2">mm</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="dip_lv_limt_up" step="1" value="100" />
+                            <span class="input-group-addon" id="basic-addon2">mm</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon2" id="sf6_limt_up" value="1000" />
+                            <span class="input-group-addon" id="basic-addon2">PPm</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="o3_limt_up" step="0.1" value="8.0" />
+                            <span class="input-group-addon" id="basic-addon2">PPm</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="o3_limt_low" step="0.1" value="2.0" />
+                            <span class="input-group-addon" id="basic-addon2">PPm</span>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div class="panel panel-primary">
+            <table class="table">
+                <div class="panel-heading">环境测量限制</div>
+                <tr>
+                    <th>变压器温度</th>
+                    <th>母排温度</th>
+                    <th>变压器电流</th>
+                    <th>变压器电压</th>
+                    <th>变压器电压</th>
+                    <th>功率因数</th>
+                    <th>火灾剩余电流</th>
+                    <th>避雷泄漏电流</th>
+                    <th>雷击次数</th>
+                </tr>
+                <tr>
+                    <th>上限</th>
+                    <th>上限</th>
+                    <th>上限</th>
+                    <th>上限</th>
+                    <th>下限</th>
+                    <th>下限</th>
+                    <th>上限</th>
+                    <th>上限</th>
+                    <th>下限</th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="vt_tmp_limt_up" step="0.1" value="35.0" />
+                            <span class="input-group-addon" id="basic-addon2">&#8451;</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="bb_tmp_limt_up" step="0.1" value="65.0" />
+                            <span class="input-group-addon" id="basic-addon2">&#8451;</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="vt_cur_limt_up" step="0.1" value="1250.0" />
+                            <span class="input-group-addon" id="basic-addon2">A</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="vt_v_limt_up" step="0.1" value="418.0" />
+                            <span class="input-group-addon" id="basic-addon2">V</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="vt_v_limt_low" step="0.1" value="350.0" />
+                            <span class="input-group-addon" id="basic-addon2">V</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="pow_fac_limt_low" step="0.01" value="0.95" />
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon2" id="after_cur_limt_up" step="0.1" value="10.5" />
+                            <span class="input-group-addon" id="basic-addon2">mA</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="leak_cur_limt_up" step="0.1" value="1.0" />
+                            <span class="input-group-addon" id="basic-addon2">mA</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="" aria-describedby="basic-addon2" id="li_limt_up" step="1" value="10" />
+                            <span class="input-group-addon" id="basic-addon2">PCS</span>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-4"></div>
+        <!--button trigger modal-->
+        <div class="col-md-4">
+            <button type="button" class="btn btn-success btn-block" id="btn_save" data-toggle="modal" data-target="#saveModal">保&nbsp;&nbsp;存</button>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="saveModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h1 style="text-align: center;">保存成功</h1>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script>
+    //btn_save
+    $("#btn_save").click(function () {
+    });
+</script>
