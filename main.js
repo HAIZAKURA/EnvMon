@@ -7,7 +7,7 @@ const path = require('path')
 let mainWindow
 
 function createWindow () {
-  Menu.setApplicationMenu(null)
+  //Menu.setApplicationMenu(null)
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 1600,
