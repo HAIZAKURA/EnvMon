@@ -1,13 +1,246 @@
+<style>
+        /* google、safari */
+        input::-webkit-outer-spin-button,  
+        input::-webkit-inner-spin-button{  
+            -webkit-appearance: none !important;  
+            margin: 0;  
+        }
+        /* 火狐 */
+        input[type="number"]{
+            -moz-appearance: textfield;
+        }
+</style>
 <br />
 <div class="row">
     <div class="col-md-6">
         <div class="panel panel-primary">
             <div class="panel-heading">卡号设置</div>
+            <table class="table table-bordered table-striped fixedhead" id="fixedhead">
+                <thead>
+                    <tr>
+                        <th>卡号</th>
+                        <th>姓名</th>
+                        <th>部门</th>
+                        <th>职务</th>
+                    </tr>
+                </thead>
+            </table>
+            <div style="height: 446px; overflow: auto;">
+                <table class="table table-bordered table-striped table-nowrap">
+                    <tbody>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                    </tbody>
+                </table>                
+            </div>
+
+            <div class="panel-body">
+                &nbsp;
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-primary btn-block">增加</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-primary btn-block">删除</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-primary btn-block">修改</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-primary btn-block">确定</button>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>         
+                </div>
+            </div>
+            &nbsp;
         </div>
     </div>
     <div class="col-md-6">
         <div class="panel panel-primary">
             <div class="panel-heading">记录查询</div>
+            <div class="panel-body height: 446px;overflow: auto">
+            <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>卡号</th>
+                    <th>姓名</th>
+                    <th style="width: 300px">刷卡进入时间</th>
+                </tr>
+                </thead>
+            </table>
+            <div class="table-box" style="height: 446px;overflow: auto">
+                <table class="table table-bordered table-striped">
+                    <col >
+                    <col >
+                    <col style="width: 300px"><!--统一列宽-->
+                    <tbody>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                    </tbody>
+                <table>
+            </div>    
+            </div>
+            
+            <div class="panel">
+                <table class="table text-nowrap">
+                    <tr>
+                        <th></th>
+                        <th>年</th>
+                        <th>月</th>
+                        <th>日</th>
+                        <th>时</th>
+                        <th>分</th>
+                        <th>秒</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th>开始时间:</th>
+                        <th><input type="number" class="form-control input-sm" placeholder=""/></th>
+                        <th><input type="number" class="form-control input-sm" placeholder=""/></th>
+                        <th><input type="number" class="form-control input-sm" placeholder=""/></th>
+                        <th><input type="number" class="form-control input-sm" placeholder=""/></th>
+                        <th><input type="number" class="form-control input-sm" placeholder=""/></th>
+                        <th><input type="number" class="form-control input-sm" placeholder=""/></th>
+                        <th>
+                            <button type="button" class="btn btn-primary">查询</button>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>结束时间:</th>
+                        <th><input type="number" class="form-control input-sm" placeholder=""/></th>
+                        <th><input type="number" class="form-control input-sm" placeholder=""/></th>
+                        <th><input type="number" class="form-control input-sm" placeholder=""/></th>
+                        <th><input type="number" class="form-control input-sm" placeholder=""/></th>
+                        <th><input type="number" class="form-control input-sm" placeholder=""/></th>
+                        <th><input type="number" class="form-control input-sm" placeholder=""/></th>
+                        <th>
+                            <button type="button" class="btn btn-primary">导出</button>
+                        </th>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 </div>
