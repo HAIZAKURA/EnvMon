@@ -1,21 +1,63 @@
 <style>
-        /* google、safari */
-        input::-webkit-outer-spin-button,  
-        input::-webkit-inner-spin-button{  
-            -webkit-appearance: none !important;  
-            margin: 0;  
-        }
-        /* 火狐 */
-        input[type="number"]{
-            -moz-appearance: textfield;
-        }
+    /*
+    input::-webkit-outer-spin-button,  
+    input::-webkit-inner-spin-button{  
+        -webkit-appearance: none !important;  
+        margin: 0;  
+    }
+    input[type="number"]{
+        -moz-appearance: textfield;
+    }
+    */
+
+    /* 最外框外框 无滚动条 */
+    .div-out-height-a {
+        position: relative;
+        overflow: hidden;
+        height: 550px;
+    }
+    .div-out-height-b {
+        position: relative;
+        overflow: hidden;
+        height: 455px;
+    }
+    /* 假表头 */
+    .false_table{
+        width: 100%;
+        float: left;
+    }
+    /* 假表头宽度为（100% - 滚动条宽度）*/
+    .false_table table{
+        margin: 0;
+        width: calc(100% - 16px);
+    }
+    /* 表格滚动条 */
+    .out_scoll_a {
+      overflow: scroll;
+      overflow-x: hidden;
+      clear: both;
+      max-height: 500px;  /* 给有滚动条的框加最大高度，超过这个高度就开始滚动 */
+    }
+    .out_scoll_b {
+      overflow: scroll;
+      overflow-x: hidden;
+      clear: both;
+      max-height: 405px;  /* 给有滚动条的框加最大高度，超过这个高度就开始滚动 */
+    }
+    /* 隐藏真表头 */
+    .out_scoll_a thead{
+      display: none!important;
+    }
+    .out_scoll_b thead{
+      display: none!important;
+    }
 </style>
 <br />
 <div class="row">
     <div class="col-md-6">
         <div class="panel panel-primary">
-            <div class="panel-heading">卡号设置</div>
-            <table class="table table-bordered table-striped fixedhead" id="fixedhead">
+            <div class="panel-heading text-center">卡号设置</div>
+            <!--table class="table table-bordered table-striped table-hover fixedhead" id="fixedhead">
                 <thead>
                     <tr>
                         <th>卡号</th>
@@ -24,9 +66,132 @@
                         <th>职务</th>
                     </tr>
                 </thead>
-            </table>
-            <div style="height: 446px; overflow: auto;">
-                <table class="table table-bordered table-striped table-nowrap">
+                <tbody>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                </tbody>
+            </table-->
+            
+            <div class="panel-body">
+                <div class="div-out-height-a">
+                <!-- 假表头 -->
+                <div class="false_table">
+                  <table class="table">
+                    <thead> 
+                      <tr>
+                        <th>卡号</th>
+                        <th>姓名</th>
+                        <th>部门</th>
+                        <th>职务</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+                <!-- 真表 -->
+                <div class="out_scoll_a">
+                  <table class="table table-bordered table-striped table-hover fixedhead" id="fixedhead">
+                    <thead> 
+                        <tr>
+                            <th>卡号</th>
+                            <th>姓名</th>
+                            <th>部门</th>
+                            <th>职务</th>
+                        </tr>
+                    </thead>
                     <tbody>
                         <tr>
                             <td>-</tb>
@@ -125,39 +290,31 @@
                             <td>-</tb>
                         </tr>
                     </tbody>
-                </table>                
-            </div>
-
-            <div class="panel-body">
-                &nbsp;
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-10">
-                            <div class="col-md-3">
-                                <button type="button" class="btn btn-primary btn-block">增加</button>
-                            </div>
-                            <div class="col-md-3">
-                                <button type="button" class="btn btn-primary btn-block">删除</button>
-                            </div>
-                            <div class="col-md-3">
-                                <button type="button" class="btn btn-primary btn-block">修改</button>
-                            </div>
-                            <div class="col-md-3">
-                                <button type="button" class="btn btn-primary btn-block">确定</button>
-                            </div>
-                        </div>
-                        <div class="col-md-1"></div>
-                    </div>         
+                  </table>
+                </div>
                 </div>
             </div>
-            &nbsp;
+
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-primary btn-block btn-lg">增加</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-primary btn-block btn-lg">删除</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-primary btn-block btn-lg">修改</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <div class="col-md-6">
         <div class="panel panel-primary">
-            <div class="panel-heading">记录查询</div>
-            <div class="panel-body height: 446px;overflow: auto">
+            <div class="panel-heading text-center">记录查询</div>
+            <!--div class="panel-body height: 446px;overflow: auto">
             <table class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -171,7 +328,7 @@
                 <table class="table table-bordered table-striped">
                     <col >
                     <col >
-                    <col style="width: 300px"><!--统一列宽-->
+                    <col style="width: 300px">
                     <tbody>
                         <tr>
                             <td>-</tb>
@@ -201,9 +358,185 @@
                     </tbody>
                 <table>
             </div>    
-            </div>
+            </div-->
             
-            <div class="panel">
+            <div class="panel-body">
+                <div class="div-out-height-b">
+                <!-- 假表头 -->
+                <div class="false_table">
+                  <table class="table">
+                    <thead> 
+                      <tr>
+                        <th>卡号</th>
+                        <th>姓名</th>
+                        <th>时间</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+                <!-- 真表 -->
+                <div class="out_scoll_b">
+                  <table class="table table-bordered table-striped table-hover fixedhead" id="fixedhead">
+                    <thead> 
+                        <tr>
+                            <th>卡号</th>
+                            <th>姓名</th>
+                            <th>时间</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+                </div>
+            </div>
+
+            <div class="panel-footer">
+                <div style="height: 140px;">
+                <table class="table">
+                    <tr>
+                        <th></th>
+                        <th>年</th>
+                        <th>月</th>
+                        <th>日</th>
+                        <th>时</th>
+                        <th>分</th>
+                        <th>秒</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th>开始</th>
+                        <th>
+                            <input type="text" class="form-control">
+                        </th>
+                        <th>
+                            <input type="text" class="form-control">
+                        </th>
+                        <th>
+                            <input type="text" class="form-control">
+                        </th>
+                        <th>
+                            <input type="text" class="form-control">
+                        </th>
+                        <th>
+                            <input type="text" class="form-control">
+                        </th>
+                        <th>
+                            <input type="text" class="form-control">
+                        </th>
+                        <th>
+                            <button type="button" class="btn btn-primary">查询</button>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>结束</th>
+                        <th>
+                            <input type="text" class="form-control">
+                        </th>
+                        <th>
+                            <input type="text" class="form-control">
+                        </th>
+                        <th>
+                            <input type="text" class="form-control">
+                        </th>
+                        <th>
+                            <input type="text" class="form-control">
+                        </th>
+                        <th>
+                            <input type="text" class="form-control">
+                        </th>
+                        <th>
+                            <input type="text" class="form-control">
+                        </th>
+                        <th>
+                            <button type="button" class="btn btn-primary">导出</button>
+                        </th>
+                    </tr>
+                </table>
+                </div>
+            </div>
+
+            <!--div class="panel">
                 <table class="table text-nowrap">
                     <tr>
                         <th></th>
@@ -240,7 +573,7 @@
                         </th>
                     </tr>
                 </table>
-            </div>
+            </div-->
         </div>
     </div>
 </div>
