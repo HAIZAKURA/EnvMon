@@ -1,0 +1,179 @@
+<style>
+    /* 最外框外框 无滚动条 */
+    .div-out-height {
+        position: relative;
+        overflow: hidden;
+        height: 600px;
+    }
+    /* 假表头 */
+    .false_table{
+        width: 100%;
+        float: left;
+    }
+    /* 假表头宽度为（100% - 滚动条宽度）*/
+    .false_table table{
+        margin: 0;
+        width: calc(100% - 16px);
+    }
+    /* 表格滚动条 */
+    .out_scoll {
+      overflow: scroll;
+      overflow-x: hidden;
+      clear: both;
+      max-height: 550px;  /* 给有滚动条的框加最大高度，超过这个高度就开始滚动 */
+    }
+    /* 隐藏真表头 */
+    .out_scoll thead{
+      display: none!important;
+    }
+</style>
+<br />
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="div-out-height">
+                    <!-- 假表头 -->
+                    <div class="false_table">
+                        <table class="table">
+                            <thead> 
+                                <tr>
+                                  <th>姓名</th>
+                                  <th>密码</th>
+                                  <th>部门</th>
+                                  <th>权限</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <!-- 真表 -->
+                    <div class="out_scoll">
+                        <table class="table table-bordered table-striped table-hover fixedhead" id="fixedhead">
+                            <thead> 
+                                <tr>
+                                    <th>姓名</th>
+                                    <th>密码</th>
+                                    <th>部门</th>
+                                    <th>权限</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                </tr>
+                                <tr>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                </tr>
+                                <tr>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                </tr>
+                                <tr>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                </tr>
+                                <tr>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                </tr>
+                                <tr>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                </tr>
+                                <tr>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                </tr>
+                                <tr>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                </tr>
+                                <tr>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                </tr>
+                                <tr>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                </tr>
+                                <tr>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                </tr>
+                                <tr>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                </tr>
+                                <tr>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                </tr>
+                                <tr>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                </tr>
+                                <tr>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                </tr>
+                                <tr>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                    <td>-</tb>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-primary btn-block btn-lg">增加</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-primary btn-block btn-lg">删除</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-primary btn-block btn-lg">修改</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
