@@ -1,0 +1,146 @@
+<style>
+        /* 最外框外框 无滚动条 */
+        .div-out-height {
+            position: relative;
+            overflow: hidden;
+            height: 10px;
+            /* ??? */
+        }
+        /* 假表头 */
+        .false_table{
+            width: 100%;
+            float: left;
+        }
+        /* 假表头宽度为（100% - 滚动条宽度）*/
+        .false_table table{
+            margin: 0;
+            width: calc(100% - 16px);
+        }
+        /* 表格滚动条 */
+        .out_scoll {
+          overflow: scroll;
+          overflow-x: hidden;
+          clear: both;
+          max-height: 50px;  /* 给有滚动条的框加最大高度，超过这个高度就开始滚动 */
+        }
+        /* 隐藏真表头 */
+        .out_scoll thead{
+          display: none!important;
+        }
+    </style>
+<br />
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center">查询参数选择</div>
+            <!-- TODO -->
+            <div class="panel-body">
+                <div class="col-md-5">
+                    <table class="table text-center">
+                        <tr>
+                            <th>记录的参数</th>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-2">
+                    <br/>
+                    <br/>
+                    <br/>
+                    <button type="button" class="btn btn-primary btn-lg">-></button>
+                    <button type="button" class="btn btn-primary btn-lg"><-</button>
+                    <button type="button" class="btn btn-primary btn-lg">》</button>
+                    <button type="button" class="btn btn-primary btn-lg">《</button>
+                </div>
+                <div class="col-md-5">
+                    <table class="table text-center">
+                        <tr>
+                            <th>选择的参数</th>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center">数据查询时间限制</div>
+            <div class="panel-body">
+                <div><!--style="height: 140px;-->
+                    <table class="table">
+                        <tr>
+                            <th></th>
+                            <th>年</th>
+                            <th>月</th>
+                            <th>日</th>
+                            <th>时</th>
+                            <th>分</th>
+                            <th>秒</th>
+                        </tr>
+                        <tr>
+                            <th>开始</th>
+                            <th>
+                                <input type="number" class="form-control">
+                            </th>
+                            <th>
+                                <input type="number" class="form-control">
+                            </th>
+                            <th>
+                                <input type="text" class="form-control">
+                            </th>
+                            <th>
+                                <input type="text" class="form-control">
+                            </th>
+                            <th>
+                                <input type="text" class="form-control">
+                            </th>
+                            <th>
+                                <input type="text" class="form-control">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>结束</th>
+                            <th>
+                                <input type="text" class="form-control">
+                            </th>
+                            <th>
+                                <input type="text" class="form-control">
+                            </th>
+                            <th>
+                                <input type="text" class="form-control">
+                            </th>
+                            <th>
+                                <input type="text" class="form-control">
+                            </th>
+                            <th>
+                                <input type="text" class="form-control">
+                            </th>
+                            <th>
+                                <input type="text" class="form-control">
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div style="height: 80px;">
+                <div class="col-md-10">
+                    <p class="text-warning">请选择最大时间范围为1年</p>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary btn-lg">开始<br>查询</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading text-center">参数列表</div>
+    <div class="panel-body div-out-height">
+
+    </div>
+</div>
