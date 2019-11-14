@@ -1,39 +1,47 @@
 <style>
-        /* 最外框外框 无滚动条 */
-        .div-out-height {
-            position: relative;
-            overflow: hidden;
-            height: 10px;
-            /* ??? */
-        }
-        /* 假表头 */
-        .false_table{
-            width: 100%;
-            float: left;
-        }
-        /* 假表头宽度为（100% - 滚动条宽度）*/
-        .false_table table{
-            margin: 0;
-            width: calc(100% - 16px);
-        }
-        /* 表格滚动条 */
-        .out_scoll {
-          overflow: scroll;
-          overflow-x: hidden;
-          clear: both;
-          max-height: 50px;  /* 给有滚动条的框加最大高度，超过这个高度就开始滚动 */
-        }
-        /* 隐藏真表头 */
-        .out_scoll thead{
-          display: none!important;
-        }
-    </style>
+    /* 消去input number类型的上下增减按钮 会应用到全局*/
+    input::-webkit-outer-spin-button,  
+    input::-webkit-inner-spin-button{  
+        -webkit-appearance: none !important;  
+        margin: 0;  
+    }
+    input[type="number"]{
+        -moz-appearance: textfield;
+    }
+   
+    /* 最外框外框 无滚动条 */
+    .div-out-height-tab6 {
+        position: relative;
+        overflow: hidden;
+        height: 300px;
+    }
+    /* 表格滚动条 */
+    .out_scoll-tab6 {
+        overflow: scroll;
+        overflow-x: hidden;
+        clear: both;
+        max-height: 250px;  /* 给有滚动条的框加最大高度，超过这个高度就开始滚动 */
+    }
+    /* 隐藏真表头 */
+    .out_scoll thead{
+        display: none!important;
+    }
+    /* @Overwrite 自定义span大小 */
+    .input-overwrite{
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+    /* @Overwrite 自定义input大小 */
+    .span-overwirte {
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+</style>
 <br />
 <div class="row">
     <div class="col-md-6">
         <div class="panel panel-primary">
             <div class="panel-heading text-center">查询参数选择</div>
-            <!-- TODO -->
             <div class="panel-body">
                 <div class="col-md-5">
                     <table class="table text-center">
@@ -44,15 +52,21 @@
                             <td>-</td>
                         </tr>
                     </table>
+                    <!-- TODO -->
                 </div>
                 <div class="col-md-2">
                     <br/>
                     <br/>
-                    <br/>
-                    <button type="button" class="btn btn-primary btn-lg">-></button>
-                    <button type="button" class="btn btn-primary btn-lg"><-</button>
-                    <button type="button" class="btn btn-primary btn-lg">》</button>
-                    <button type="button" class="btn btn-primary btn-lg">《</button>
+                    <div class="btn-group">
+                        <button type="button" class="btn-primary btn-lg">-></button>
+                        <br/><br/>
+                        <button type="button" class="btn-primary btn-lg"><-</button>
+                        <br/><br/>
+                        <button type="button" class="btn-primary btn-lg">》</button>
+                        <br/><br/>
+                        <button type="button" class="btn-primary btn-lg">《</button>
+                    </div>
+                   
                 </div>
                 <div class="col-md-5">
                     <table class="table text-center">
@@ -106,22 +120,40 @@
                         <tr>
                             <th>结束</th>
                             <th>
-                                <input type="text" class="form-control">
+                                <div class="input-group">
+                                    <input type="number" class="form-control input-overwrite" placeholder=""/>
+                                    <span class="input-group-addon span-overwirte" >年</span>
+                                </div>
                             </th>
                             <th>
-                                <input type="text" class="form-control">
+                                <div class="input-group">
+                                    <input type="number" class="form-control input-overwrite" placeholder=""/>
+                                    <span class="input-group-addon span-overwirte" >月</span>
+                                </div>
                             </th>
                             <th>
-                                <input type="text" class="form-control">
+                                <div class="input-group">
+                                    <input type="number" class="form-control input-overwrite" placeholder=""  />
+                                    <span class="input-group-addon span-overwirte" >日</span>
+                                </div>
                             </th>
                             <th>
-                                <input type="text" class="form-control">
+                                <div class="input-group">
+                                    <input type="number" class="form-control input-overwrite" placeholder=""  />
+                                    <span class="input-group-addon span-overwirte" >时</span>
+                                </div>
                             </th>
                             <th>
-                                <input type="text" class="form-control">
+                                <div class="input-group">
+                                    <input type="number" class="form-control input-overwrite" placeholder=""  />
+                                    <span class="input-group-addon span-overwirte" >分</span>
+                                </div>
                             </th>
                             <th>
-                                <input type="text" class="form-control">
+                                <div class="input-group">
+                                    <input type="number" class="form-control input-overwrite" placeholder=""  />
+                                    <span class="input-group-addon span-overwirte" >秒</span>
+                                </div>
                             </th>
                         </tr>
                     </table>
@@ -140,7 +172,132 @@
 </div>
 <div class="panel panel-primary">
     <div class="panel-heading text-center">参数列表</div>
-    <div class="panel-body div-out-height">
-
+    <div class="panel-body">
+        <div class="div-out-height-tab6">
+            <!-- 假表头 -->
+            <div class="false_table">
+                <table class="table">
+                    <thead> 
+                        <tr>
+                            <th>时间</th>
+                            <th>参数二</th>
+                            <th>参数三</th>
+                            <th>参数四</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <!-- 真表 -->
+            <div class="out_scoll">
+                <table class="table table-bordered table-striped table-hover fixedhead" id="fixedhead">
+                    <thead> 
+                        <tr>
+                            <th>时间</th>
+                            <th>参数一</th>
+                            <th>参数二</th>
+                            <th>参数三</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                        <tr>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                            <td>-</tb>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>
