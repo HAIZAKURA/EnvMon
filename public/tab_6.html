@@ -1,11 +1,11 @@
 <style>
     /* 消去input number类型的上下增减按钮 会应用到全局*/
     input::-webkit-outer-spin-button,  
-    input::-webkit-inner-spin-button{  
+    input::-webkit-inner-spin-button {  
         -webkit-appearance: none !important;  
         margin: 0;  
     }
-    input[type="number"]{
+    input[type="number"] {
         -moz-appearance: textfield;
     }
    
@@ -14,6 +14,8 @@
         position: relative;
         overflow: hidden;
         height: 300px;
+        width: 100%;
+        overflow: scroll;
     }
     /* 表格滚动条 */
     .out_scoll-tab6 {
@@ -23,11 +25,11 @@
         max-height: 250px;  /* 给有滚动条的框加最大高度，超过这个高度就开始滚动 */
     }
     /* 隐藏真表头 */
-    .out_scoll thead{
+    .out_scoll thead {
         display: none!important;
     }
     /* @Overwrite 自定义span大小 */
-    .input-overwrite{
+    .input-overwrite {
         padding-left: 6px;
         padding-right: 6px;
     }
@@ -35,6 +37,30 @@
     .span-overwirte {
         padding-right: 4px;
         padding-left: 4px;
+    }
+
+    .notice {
+        height: 3em;
+    }
+
+    .notice h4 {
+        line-height: 3em;
+    }
+
+    .time-begin {
+        height: 80px;
+    }
+
+    .time-begin th {
+        vertical-align: middle !important;
+    }
+
+    .time-end {
+        height: 80px;
+    }
+
+    .time-end th {
+        vertical-align: middle !important;
     }
 </style>
 <br />
@@ -70,6 +96,7 @@
                 </div>
                 <div class="col-md-5">
                     <table class="table text-center">
+                        <br>
                         <tr>
                             <th>选择的参数</th>
                         </tr>
@@ -84,107 +111,107 @@
     <div class="col-md-6">
         <div class="panel panel-primary">
             <div class="panel-heading text-center">数据查询时间限制</div>
-            <div class="panel-body">
-                <div><!--style="height: 140px;-->
-                    <table class="table">
-                        <!-- <tr>
-                            <th></th>
-                            <th>年</th>
-                            <th>月</th>
-                            <th>日</th>
-                            <th>时</th>
-                            <th>分</th>
-                            <th>秒</th>
-                        </tr> -->
-                        <tr>
-                            <th>开始</th>
-                            <th>
-                                <div class="input-group">
-                                    <input type="number" class="form-control input-overwrite" placeholder=""/>
-                                    <span class="input-group-addon span-overwirte" >年</span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="input-group">
-                                    <input type="number" class="form-control input-overwrite" placeholder=""/>
-                                    <span class="input-group-addon span-overwirte" >月</span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="input-group">
-                                    <input type="number" class="form-control input-overwrite" placeholder=""/>
-                                    <span class="input-group-addon span-overwirte" >日</span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="input-group">
-                                    <input type="number" class="form-control input-overwrite" placeholder=""/>
-                                    <span class="input-group-addon span-overwirte" >时</span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="input-group">
-                                    <input type="number" class="form-control input-overwrite" placeholder=""/>
-                                    <span class="input-group-addon span-overwirte" >分</span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="input-group">
-                                    <input type="number" class="form-control input-overwrite" placeholder=""/>
-                                    <span class="input-group-addon span-overwirte" >秒</span>
-                                </div>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>结束</th>
-                            <th>
-                                <div class="input-group">
-                                    <input type="number" class="form-control input-overwrite" placeholder=""/>
-                                    <span class="input-group-addon span-overwirte" >年</span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="input-group">
-                                    <input type="number" class="form-control input-overwrite" placeholder=""/>
-                                    <span class="input-group-addon span-overwirte" >月</span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="input-group">
-                                    <input type="number" class="form-control input-overwrite" placeholder=""  />
-                                    <span class="input-group-addon span-overwirte" >日</span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="input-group">
-                                    <input type="number" class="form-control input-overwrite" placeholder=""  />
-                                    <span class="input-group-addon span-overwirte" >时</span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="input-group">
-                                    <input type="number" class="form-control input-overwrite" placeholder=""  />
-                                    <span class="input-group-addon span-overwirte" >分</span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="input-group">
-                                    <input type="number" class="form-control input-overwrite" placeholder=""  />
-                                    <span class="input-group-addon span-overwirte" >秒</span>
-                                </div>
-                            </th>
-                        </tr>
-                    </table>
+            <table class="table">
+                <tr class="time-begin">
+                    <th>开始</th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control input-overwrite" placeholder="" min="2001" max="2099" step="1" value="2019" />
+                            <span class="input-group-addon span-overwirte" >年</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control input-overwrite" placeholder="" min="1" max="12" step="1" value="1" />
+                            <span class="input-group-addon span-overwirte" >月</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control input-overwrite" placeholder="" min="1" max="31" step="1" value="22" />
+                            <span class="input-group-addon span-overwirte" >日</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control input-overwrite" placeholder="" min="0" max="23" step="1" value="19" />
+                            <span class="input-group-addon span-overwirte" >时</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control input-overwrite" placeholder="" min="0" max="59" step="1" value="5" />
+                            <span class="input-group-addon span-overwirte" >分</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control input-overwrite" placeholder="" min="0" max="59" step="1" value="18" />
+                            <span class="input-group-addon span-overwirte" >秒</span>
+                        </div>
+                    </th>
+                </tr>
+                <tr class="time-end">
+                    <th>结束</th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control input-overwrite" placeholder="" min="2001" max="2099" step="1" value="2019" />
+                            <span class="input-group-addon span-overwirte" >年</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control input-overwrite" placeholder="" min="1" max="12" step="1" value="2" />
+                            <span class="input-group-addon span-overwirte" >月</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control input-overwrite" placeholder="" min="1" max="31" step="1" value="26" />
+                            <span class="input-group-addon span-overwirte" >日</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control input-overwrite" placeholder="" min="0" max="23" step="1" value="15" />
+                            <span class="input-group-addon span-overwirte" >时</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control input-overwrite" placeholder="" min="0" max="59" step="1" value="48" />
+                            <span class="input-group-addon span-overwirte" >分</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-group">
+                            <input type="number" class="form-control input-overwrite" placeholder="" min="0" max="59" step="1" value="39" />
+                            <span class="input-group-addon span-overwirte" >秒</span>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+                
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="notice">
+                            <h4 class="text-danger">请选择最大时间范围为1年</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-primary btn-block btn-lg">开始<br>查询</button>
+                    </div>
                 </div>
             </div>
-            <div style="height: 80px;">
+            <!--div style="height: 80px;">
                 <div class="col-md-10">
                     <p class="text-warning">请选择最大时间范围为1年</p>
                 </div>
                 <div class="col-md-2">
                     <button type="button" class="btn btn-primary btn-lg">开始<br>查询</button>
                 </div>
-            </div>
+            </div-->
         </div>
     </div>
 </div>
@@ -197,7 +224,7 @@
                 <table class="table">
                     <thead> 
                         <tr>
-                            <th>时间</th>
+                            <th>时&nbsp;&nbsp;&nbsp;&nbsp;间</th>
                             <th>参数二</th>
                             <th>参数三</th>
                             <th>参数四</th>
@@ -210,7 +237,7 @@
                 <table class="table table-bordered table-striped table-hover fixedhead" id="fixedhead">
                     <thead> 
                         <tr>
-                            <th>时间</th>
+                            <th>时&nbsp;&nbsp;&nbsp;&nbsp;间</th>
                             <th>参数一</th>
                             <th>参数二</th>
                             <th>参数三</th>
