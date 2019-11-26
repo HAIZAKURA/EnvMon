@@ -26,6 +26,18 @@
     .out_scoll thead{
       display: none!important;
     }
+
+    #userAddModal {
+        top: 250px;
+    }
+
+    #userModModal {
+        top: 250px;
+    }
+
+    #userDelModal {
+        top: 300px;
+    }
 </style>
 <br />
 <div class="row">
@@ -163,17 +175,158 @@
             <div class="panel-footer">
                 <div class="row">
                     <div class="col-md-4">
-                        <button type="button" class="btn btn-primary btn-block btn-lg">增加</button>
+                        <button type="button" class="btn btn-primary btn-block btn-lg" data-toggle="modal" data-target="#userAddModal">增加</button>
                     </div>
                     <div class="col-md-4">
-                        <button type="button" class="btn btn-primary btn-block btn-lg">删除</button>
+                        <button type="button" class="btn btn-primary btn-block btn-lg" data-toggle="modal" data-target="#userDelModal">删除</button>
                     </div>
                     <div class="col-md-4">
-                        <button type="button" class="btn btn-primary btn-block btn-lg">修改</button>
+                        <button type="button" class="btn btn-primary btn-block btn-lg" data-toggle="modal" data-target="#userModModal">修改</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="col-md-2"></div>
+</div>
+
+<div class="modal fade" id="userAddModal" tabindex="-1" role="dialog" aria-labelledby="userAddModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">增加用户</h4>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="addUserNam" class="col-sm-2 control-label">姓名</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="addUserNam" placeholder="姓名">
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+                <div class="form-group">
+                    <label for="addUserPas" class="col-sm-2 control-label">密码</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="addUserPas" placeholder="密码">
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+                <div class="form-group">
+                    <label for="addUserCla" class="col-sm-2 control-label">部门</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" id="addUserName">
+                            <option>部门 1</option>
+                            <option>部门 2</option>
+                            <option>部门 3</option>
+                            <option>部门 4</option>
+                            <option>部门 5</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+                <div class="form-group">
+                    <label for="addUserPow" class="col-sm-2 control-label">权限</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" id="addUserPow">
+                            <option>权限 1</option>
+                            <option>权限 2</option>
+                            <option>权限 3</option>
+                            <option>权限 4</option>
+                            <option>权限 5</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">增加</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="userDelModal" tabindex="-1" role="dialog" aria-labelledby="userDelModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+                <h4 class="modal-title">删除用户</h4>
+          </div>
+          <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="delCardNam" class="col-sm-2 control-label">姓名</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="delCardNam" placeholder="姓名">
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">删除</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="userModModal" tabindex="-1" role="dialog" aria-labelledby="userModModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">修改用户</h4>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="modUserNam" class="col-sm-2 control-label">姓名</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="modUserNam" placeholder="姓名">
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+                <div class="form-group">
+                    <label for="modUserPas" class="col-sm-2 control-label">密码</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="modUserPas" placeholder="密码">
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+                <div class="form-group">
+                    <label for="modUserCla" class="col-sm-2 control-label">部门</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" id="modUserName">
+                            <option>部门 1</option>
+                            <option>部门 2</option>
+                            <option>部门 3</option>
+                            <option>部门 4</option>
+                            <option>部门 5</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+                <div class="form-group">
+                    <label for="modUserPow" class="col-sm-2 control-label">权限</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" id="modUserPow">
+                            <option>权限 1</option>
+                            <option>权限 2</option>
+                            <option>权限 3</option>
+                            <option>权限 4</option>
+                            <option>权限 5</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">修改</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+        </div>
+      </div>
+    </div>
 </div>
