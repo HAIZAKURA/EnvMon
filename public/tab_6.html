@@ -40,15 +40,16 @@
     }
 
     .notice {
-        height: 3em;
+        height: 37px;
+        overflow: hidden;
     }
 
-    .notice h4 {
-        line-height: 3em;
+    .notice p {
+        line-height: 36px;
     }
 
     .time-begin {
-        height: 80px;
+        height: 6em;
     }
 
     .time-begin th {
@@ -56,12 +57,29 @@
     }
 
     .time-end {
-        height: 80px;
+        height: 6em;
     }
 
     .time-end th {
         vertical-align: middle !important;
     }
+
+    .left-check-box {
+        border: lightgray solid 1px;
+        height: 196px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 0 0 0 1em;
+    }
+
+    .right-check-box {
+        border: lightgray solid 1px;
+        height: 196px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 0 0 0 1em;
+    }
+
 </style>
 <br />
 <div class="row">
@@ -69,41 +87,86 @@
         <div class="panel panel-primary">
             <div class="panel-heading text-center">查询参数选择</div>
             <div class="panel-body">
-                <div class="col-md-5">
-                    <table class="table text-center">
-                        <tr>
-                            <th>记录的参数</th>
-                        </tr>
-                        <tr>
-                            <td>-</td>
-                        </tr>
-                    </table>
-                    <!-- TODO -->
-                </div>
-                <div class="col-md-2">
-                    <br/>
-                    <br/>
-                    <div class="btn-group">
-                        <button type="button" class="btn-primary btn-lg">-></button>
-                        <br/><br/>
-                        <button type="button" class="btn-primary btn-lg"><-</button>
-                        <br/><br/>
-                        <button type="button" class="btn-primary btn-lg">》</button>
-                        <br/><br/>
-                        <button type="button" class="btn-primary btn-lg">《</button>
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="left-check-box">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Option one</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Option one</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Option one</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Option one</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Option one</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Option one</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Option one</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Option one</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Option one</label>
+                            </div>
+                        </div>
                     </div>
-                   
-                </div>
-                <div class="col-md-5">
-                    <table class="table text-center">
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-primary btn-block">
+                            <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                        </button>
                         <br>
-                        <tr>
-                            <th>选择的参数</th>
-                        </tr>
-                        <tr>
-                            <td>-</td>
-                        </tr>
-                    </table>
+                        <button type="button" class="btn btn-primary btn-block">
+                            <span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
+                        </button>
+                        <br>
+                        <button type="button" class="btn btn-primary btn-block">
+                            <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
+                        </button>
+                        <br>
+                        <button type="button" class="btn btn-primary btn-block">
+                            <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="right-check-box">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Option one</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Option one</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Option one</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Option one</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Option one</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Option one</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Option one</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Option one</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Option one</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -196,11 +259,11 @@
                 <div class="row">
                     <div class="col-md-9">
                         <div class="notice">
-                            <h4 class="text-danger">请选择最大时间范围为1年</h4>
+                            <p class="text-danger">请选择最大时间范围为1年</p>
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <button type="button" class="btn btn-primary btn-block btn-lg">开始<br>查询</button>
+                        <button type="button" class="btn btn-primary btn-block">开始查询</button>
                     </div>
                 </div>
             </div>
@@ -346,11 +409,314 @@
 </div-->
 
 <style>
+    .tbHeadFix {
+        font-size: 12px;
+        position: relative;
+        border: 0px solid #E4F1FF;
+        overflow: hidden;
+        color: #000;
+        +border-right: 0px solid #cde;
+        +padding-right: 2px;
+    }
+    
+    .tbHeadFix div.theadDivBox {
+        float: left;
+        padding-right: 40px;
+    }
+    .tbHeadFix div.tbodyDiv table {
+    /*    margin-bottom: 10px;*/
+        border-bottom: 0px;
+        margin-bottom: 0px;
+    }
+    
+    .tbHeadFix div.theadDiv {
+        background: #fafafa;
+        position: relative;
+        border: 1px solid #cde;
+        border-bottom: 0px;
+        overflow: hidden;
+        +width:100%;
+    }
+    .tbHeadFix div.theadDiv table {
+        border-right: 1px solid #fff;
+    }
+    
+    .tbHeadFix div.tbodyDiv {
+        border: 1px solid #cde;
+        border-top: 0px;
+        background: #fff;
+        overflow: auto;
+        position: relative;
+        +width:100%;
+    }
+    .tbHeadFix div.tbodyDiv table {
+        border-bottom: 1px solid #cde;
+    }
+    .tbHeadFix div.theadDiv th, .tbHeadFix div.tbodyDiv td
+    {
+        text-align: left;
+        border-right: 1px solid #def;
+        border-left: 1px solid #fff;
+        overflow: hidden;
+        vertical-align: top !important;
+    }
+    .tbHeadFix div.theadDiv th div, .tbHeadFix div.tbodyDiv td div
+    {
+        padding: 5px;
+        border-left: 0px solid #fff;
+    }
+    .tbHeadFix div.theadDiv th {
+        font-weight: normal;
+        height: 24px;
+        cursor: default;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    .tbHeadFix div.tbodyDiv td {
+        border-bottom: 1px solid #fff;
+        vertical-align: top;
+        white-space: nowrap;
+    }
+    
+    .tbHeadFix div.tbodyDiv td div {
+        border-top: 0px solid #fff;
+        padding-bottom: 4px;
+    }
+    
+    .tbHeadFix tr.trZ td {
+        background: #F0F8FF;
+        border-bottom: 1px solid #F0F8FF;
+    }
+    
+    .tbHeadFix div.tbodyDiv tr:hover td{
+        background: #d9ebf5;
+        border-left: 1px solid #eef8ff;
+        border-bottom: 1px dotted #a8d8eb;
+    }
+    
+    .tbHeadFix div.theadDiv th div, .tbHeadFix div.tbodyDiv td div
+    {
+        +overflow: hidden;
+    }
 
+    .tableBox {
+        width: 100px;
+        text-align: center
+    }
 </style>
 
 <div class="panel panel-primary">
     <div class="panel-heading text-center">参数列表</div>
     <div class="panel-body">
+        <div class="tbHeadFix">
+            <div class="theadDiv" id="table1_theadDiv">
+                <div class="theadDivBox" style="height: 3.5em;">
+                    <table class="table">
+                        <tr>
+                            <th align="left"><div class="tableBox">Parameter One</div></th>
+                            <th align="left"><div class="tableBox">Parameter One</div></th>
+                            <th align="left"><div class="tableBox">Parameter One</div></th>
+                            <th align="left"><div class="tableBox">Parameter One</div></th>
+                            <th align="left"><div class="tableBox">Parameter One</div></th>
+                            <th align="left"><div class="tableBox">Parameter One</div></th>
+                            <th align="left"><div class="tableBox">Parameter One</div></th>
+                            <th align="left"><div class="tableBox">Parameter One</div></th>
+                            <th align="left"><div class="tableBox">Parameter One</div></th>
+                            <th align="left"><div class="tableBox">Parameter One</div></th>
+                            <th align="left"><div class="tableBox">Parameter One</div></th>
+                            <th align="left"><div class="tableBox">Parameter One</div></th>
+                            <th align="left"><div class="tableBox">Parameter One</div></th>
+                            <th align="left"><div class="tableBox">Parameter One</div></th>
+                            <th align="left"><div class="tableBox">Parameter One</div></th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="tbodyDiv" id="table1_tbodyDiv" style="height: 32em; overflow-y: auto;">
+            <table id="flex1" class="table">
+                <tbody>
+                    <tr>
+                        <td align="left"><div class="tableBox">01</div></td>
+                        <td align="left"><div class="tableBox">02</div></td>
+                        <td align="left"><div class="tableBox">03</div></td>
+                        <td align="left"><div class="tableBox">04</div></td>
+                        <td align="left"><div class="tableBox">05</div></td>
+                        <td align="left"><div class="tableBox">06</div></td>
+                        <td align="left"><div class="tableBox">07</div></td>
+                        <td align="left"><div class="tableBox">08</div></td>
+                        <td align="left"><div class="tableBox">09</div></td>
+                        <td align="left"><div class="tableBox">10</div></td>
+                        <td align="left"><div class="tableBox">11</div></td>
+                        <td align="left"><div class="tableBox">12</div></td>
+                        <td align="left"><div class="tableBox">13</div></td>
+                        <td align="left"><div class="tableBox">14</div></td>
+                        <td align="left"><div class="tableBox">15</div></td>
+                    </tr>
+                    <tr class="trZ">
+                        <td align="left"><div class="tableBox">01</div></td>
+                        <td align="left"><div class="tableBox">02</div></td>
+                        <td align="left"><div class="tableBox">03</div></td>
+                        <td align="left"><div class="tableBox">04</div></td>
+                        <td align="left"><div class="tableBox">05</div></td>
+                        <td align="left"><div class="tableBox">06</div></td>
+                        <td align="left"><div class="tableBox">07</div></td>
+                        <td align="left"><div class="tableBox">08</div></td>
+                        <td align="left"><div class="tableBox">09</div></td>
+                        <td align="left"><div class="tableBox">10</div></td>
+                        <td align="left"><div class="tableBox">11</div></td>
+                        <td align="left"><div class="tableBox">12</div></td>
+                        <td align="left"><div class="tableBox">13</div></td>
+                        <td align="left"><div class="tableBox">14</div></td>
+                        <td align="left"><div class="tableBox">15</div></td>
+                    </tr>
+                    <tr>
+                        <td align="left"><div class="tableBox">01</div></td>
+                        <td align="left"><div class="tableBox">02</div></td>
+                        <td align="left"><div class="tableBox">03</div></td>
+                        <td align="left"><div class="tableBox">04</div></td>
+                        <td align="left"><div class="tableBox">05</div></td>
+                        <td align="left"><div class="tableBox">06</div></td>
+                        <td align="left"><div class="tableBox">07</div></td>
+                        <td align="left"><div class="tableBox">08</div></td>
+                        <td align="left"><div class="tableBox">09</div></td>
+                        <td align="left"><div class="tableBox">10</div></td>
+                        <td align="left"><div class="tableBox">11</div></td>
+                        <td align="left"><div class="tableBox">12</div></td>
+                        <td align="left"><div class="tableBox">13</div></td>
+                        <td align="left"><div class="tableBox">14</div></td>
+                        <td align="left"><div class="tableBox">15</div></td>
+                    </tr>
+                    <tr class="trZ">
+                        <td align="left"><div class="tableBox">01</div></td>
+                        <td align="left"><div class="tableBox">02</div></td>
+                        <td align="left"><div class="tableBox">03</div></td>
+                        <td align="left"><div class="tableBox">04</div></td>
+                        <td align="left"><div class="tableBox">05</div></td>
+                        <td align="left"><div class="tableBox">06</div></td>
+                        <td align="left"><div class="tableBox">07</div></td>
+                        <td align="left"><div class="tableBox">08</div></td>
+                        <td align="left"><div class="tableBox">09</div></td>
+                        <td align="left"><div class="tableBox">10</div></td>
+                        <td align="left"><div class="tableBox">11</div></td>
+                        <td align="left"><div class="tableBox">12</div></td>
+                        <td align="left"><div class="tableBox">13</div></td>
+                        <td align="left"><div class="tableBox">14</div></td>
+                        <td align="left"><div class="tableBox">15</div></td>
+                    </tr>
+                    <tr>
+                        <td align="left"><div class="tableBox">01</div></td>
+                        <td align="left"><div class="tableBox">02</div></td>
+                        <td align="left"><div class="tableBox">03</div></td>
+                        <td align="left"><div class="tableBox">04</div></td>
+                        <td align="left"><div class="tableBox">05</div></td>
+                        <td align="left"><div class="tableBox">06</div></td>
+                        <td align="left"><div class="tableBox">07</div></td>
+                        <td align="left"><div class="tableBox">08</div></td>
+                        <td align="left"><div class="tableBox">09</div></td>
+                        <td align="left"><div class="tableBox">10</div></td>
+                        <td align="left"><div class="tableBox">11</div></td>
+                        <td align="left"><div class="tableBox">12</div></td>
+                        <td align="left"><div class="tableBox">13</div></td>
+                        <td align="left"><div class="tableBox">14</div></td>
+                        <td align="left"><div class="tableBox">15</div></td>
+                    </tr>
+                    <tr class="trZ">
+                        <td align="left"><div class="tableBox">01</div></td>
+                        <td align="left"><div class="tableBox">02</div></td>
+                        <td align="left"><div class="tableBox">03</div></td>
+                        <td align="left"><div class="tableBox">04</div></td>
+                        <td align="left"><div class="tableBox">05</div></td>
+                        <td align="left"><div class="tableBox">06</div></td>
+                        <td align="left"><div class="tableBox">07</div></td>
+                        <td align="left"><div class="tableBox">08</div></td>
+                        <td align="left"><div class="tableBox">09</div></td>
+                        <td align="left"><div class="tableBox">10</div></td>
+                        <td align="left"><div class="tableBox">11</div></td>
+                        <td align="left"><div class="tableBox">12</div></td>
+                        <td align="left"><div class="tableBox">13</div></td>
+                        <td align="left"><div class="tableBox">14</div></td>
+                        <td align="left"><div class="tableBox">15</div></td>
+                    </tr>
+                    <tr>
+                        <td align="left"><div class="tableBox">01</div></td>
+                        <td align="left"><div class="tableBox">02</div></td>
+                        <td align="left"><div class="tableBox">03</div></td>
+                        <td align="left"><div class="tableBox">04</div></td>
+                        <td align="left"><div class="tableBox">05</div></td>
+                        <td align="left"><div class="tableBox">06</div></td>
+                        <td align="left"><div class="tableBox">07</div></td>
+                        <td align="left"><div class="tableBox">08</div></td>
+                        <td align="left"><div class="tableBox">09</div></td>
+                        <td align="left"><div class="tableBox">10</div></td>
+                        <td align="left"><div class="tableBox">11</div></td>
+                        <td align="left"><div class="tableBox">12</div></td>
+                        <td align="left"><div class="tableBox">13</div></td>
+                        <td align="left"><div class="tableBox">14</div></td>
+                        <td align="left"><div class="tableBox">15</div></td>
+                    </tr>
+                    <tr class="trZ">
+                        <td align="left"><div class="tableBox">01</div></td>
+                        <td align="left"><div class="tableBox">02</div></td>
+                        <td align="left"><div class="tableBox">03</div></td>
+                        <td align="left"><div class="tableBox">04</div></td>
+                        <td align="left"><div class="tableBox">05</div></td>
+                        <td align="left"><div class="tableBox">06</div></td>
+                        <td align="left"><div class="tableBox">07</div></td>
+                        <td align="left"><div class="tableBox">08</div></td>
+                        <td align="left"><div class="tableBox">09</div></td>
+                        <td align="left"><div class="tableBox">10</div></td>
+                        <td align="left"><div class="tableBox">11</div></td>
+                        <td align="left"><div class="tableBox">12</div></td>
+                        <td align="left"><div class="tableBox">13</div></td>
+                        <td align="left"><div class="tableBox">14</div></td>
+                        <td align="left"><div class="tableBox">15</div></td>
+                    </tr>
+                    <tr>
+                        <td align="left"><div class="tableBox">01</div></td>
+                        <td align="left"><div class="tableBox">02</div></td>
+                        <td align="left"><div class="tableBox">03</div></td>
+                        <td align="left"><div class="tableBox">04</div></td>
+                        <td align="left"><div class="tableBox">05</div></td>
+                        <td align="left"><div class="tableBox">06</div></td>
+                        <td align="left"><div class="tableBox">07</div></td>
+                        <td align="left"><div class="tableBox">08</div></td>
+                        <td align="left"><div class="tableBox">09</div></td>
+                        <td align="left"><div class="tableBox">10</div></td>
+                        <td align="left"><div class="tableBox">11</div></td>
+                        <td align="left"><div class="tableBox">12</div></td>
+                        <td align="left"><div class="tableBox">13</div></td>
+                        <td align="left"><div class="tableBox">14</div></td>
+                        <td align="left"><div class="tableBox">15</div></td>
+                    </tr>
+                    <tr class="trZ">
+                        <td align="left"><div class="tableBox">01</div></td>
+                        <td align="left"><div class="tableBox">02</div></td>
+                        <td align="left"><div class="tableBox">03</div></td>
+                        <td align="left"><div class="tableBox">04</div></td>
+                        <td align="left"><div class="tableBox">05</div></td>
+                        <td align="left"><div class="tableBox">06</div></td>
+                        <td align="left"><div class="tableBox">07</div></td>
+                        <td align="left"><div class="tableBox">08</div></td>
+                        <td align="left"><div class="tableBox">09</div></td>
+                        <td align="left"><div class="tableBox">10</div></td>
+                        <td align="left"><div class="tableBox">11</div></td>
+                        <td align="left"><div class="tableBox">12</div></td>
+                        <td align="left"><div class="tableBox">13</div></td>
+                        <td align="left"><div class="tableBox">14</div></td>
+                        <td align="left"><div class="tableBox">15</div></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
     </div>
 </div>
+
+<script>
+
+        document.getElementById("table1_tbodyDiv").onscroll=function(e) {
+            document.getElementById("table1_theadDiv").scrollLeft = document.getElementById("table1_tbodyDiv").scrollLeft;
+        };
+        
+        </script>
