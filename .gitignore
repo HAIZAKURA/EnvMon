@@ -43,6 +43,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+envmon-win32-x64/
 
 # TypeScript v1 declaration files
 typings/
